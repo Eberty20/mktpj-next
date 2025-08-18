@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function LandingPage() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-4">
-      <h1 className="text-4xl md:text-5xl font-bold">
+      <h1 className="text-4xl md:text-5xl font-bold text-center">
         Esta é a página da Landing Page!
       </h1>
       
@@ -11,10 +11,9 @@ export default function LandingPage() {
         Aqui o foco é a conversão, com um único objetivo claro.
       </p>
 
-      <Link href="/" legacyBehavior>
-        <a className="mt-8 bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 text-center">
+      <Link href="/" 
+        className="mt-8 bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 text-center">
           Voltar para a Home
-        </a>
       </Link>
     </div>
   );

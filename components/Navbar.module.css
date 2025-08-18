@@ -1,0 +1,85 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: #111827; /* Cor que combina com bg-gray-900 */
+}
+
+.navbar__content {
+  padding: 1rem 3rem 0.5rem; /* Reduzi o padding vertical para ficar mais fino */
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar__content .navbar__links li {
+  display: inline-block;
+}
+
+.navbar__content .navbar__links li:not(:last-of-type) {
+  margin-right: 2rem;
+}
+
+.navbar__content .navbar__links a {
+  padding: 1rem;
+  display: inline-block;
+  transition: color 0.3s ease-in-out;
+  color: white; /* Cor do texto */
+}
+
+.navbar__content .navbar__links a:hover {
+  color: #3b82f6; /* Uma cor azul para o hover */
+}
+
+.navbar.active {
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.navbar__content .navbar__mobile,
+.navbar__content .navbar__mobile .mobile__links {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar__content .navbar__links {
+    display: none;
+  }
+
+  .navbar__content .navbar__mobile {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar__content .navbar__mobile img {
+    width: 3.6rem;
+    height: 3.6rem;
+    cursor: pointer;
+  }
+
+  .navbar__content .navbar__mobile.active .mobile__links {
+    display: flex;
+    flex-direction: column;
+    background-color: #111827; /* Cor que combina com o fundo */
+    width: 100%;
+    position: absolute;
+    top: 98%;
+    left: 0;
+    padding: 1rem 0;
+    box-shadow: 0 0.4rem 0.5rem rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  .navbar__content .navbar__mobile a:hover {
+    color: #3b82f6;
+  }
+
+  .navbar__content .navbar__mobile.active .mobile__links li {
+    margin-right: 0;
+  }
+
+  .navbar__content .navbar__mobile.active .mobile__links li a {
+    padding: 1rem;
+    display: block;
+    text-align: center;
+  }
+}
