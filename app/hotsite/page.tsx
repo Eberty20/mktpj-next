@@ -1,14 +1,14 @@
 import Link from 'next/link';
 
-export default function LandingPage() {
+export default function Hotsite() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-4">
       <h1 className="text-4xl md:text-5xl font-bold">
-        Esta é a página da Landing Page!
+        Esta é a página do Hotsite!
       </h1>
-      
+
       <p className="mt-4 text-lg text-gray-300 text-center">
-        Aqui o foco é a conversão, com um único objetivo claro.
+        Aqui a campanha é temporária, para um lançamento ou evento.
       </p>
 
       <Link href="/" legacyBehavior>
