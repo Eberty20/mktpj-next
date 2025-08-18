@@ -10,7 +10,7 @@ export default function Home() {
           <img src="/assets/kotler.jpg" alt="Philip Kotler" className="mt-6 rounded-full w-96 h-96 object-cover shadow-2xl animate-fade-in transition-transform duration-500 ease-in-out group-hover:scale-x-[-1]" style={{ animationDelay: '0.4s' }} />
         </div>
         <p className="mt-8 text-lg text-center max-w-2xl animate-fade-in" style={{ animationDelay: '0.6s' }}>
-          "A melhor propaganda é um bom trabalho bem feito."
+          'A melhor propaganda é um bom trabalho bem feito.'
           <br />
           - Philip Kotler
         </p>
