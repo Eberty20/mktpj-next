@@ -15,10 +15,11 @@ const config: Config = {
         'brand-primary': 'var(--brand-primary)',
         'brand-accent': 'var(--brand-accent)',
         'brand-text': 'var(--brand-text)',
-        backgroundImage: {
+        
+      },
+      backgroundImage: {
         'etec-photo': "url('/assets/parque-da-juventude.jpg')",
       }
-      },
     },
   },
   plugins: [],
