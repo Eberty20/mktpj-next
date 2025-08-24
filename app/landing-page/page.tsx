@@ -1,53 +1,57 @@
 // app/landing-page/page.tsx
-import { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import RegistrationForm from '../../components/landing-page/RegistrationForm';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Inscrição | Feira de Marketing ETEC 2025',
   description: 'Participe da maior feira de marketing de 2025 com Mari Maria e Virginia Fonseca.',
 };
 
 export default function LandingPage() {
   return (
-    // Container principal com a foto da ETEC de fundo
-    <main className="relative min-h-screen bg-etec-photo bg-cover bg-center flex items-center justify-center p-4">
-      {/* Overlay escuro para dar contraste e facilitar a leitura */}
-      <div className="absolute inset-0 bg-brand-dark opacity-80"></div>
+    // MUDANÇA AQUI: Trocamos 'bg-etec-photo' pela nossa classe '.fundo-etec'
+    <main className="relative min-h-screen fundo-etec bg-cover bg-center flex items-center justify-center p-4 md:p-8">
+      <div className="absolute inset-0 bg-brand-dark opacity-60"></div>
       
-      {/* Container do conteúdo */}
-      <div className="relative z-10 w-full max-w-5xl bg-brand-primary/50 backdrop-blur-sm rounded-2xl shadow-2xl p-8 md:p-12">
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+      {/* MUDANÇA AQUI: Trocamos 'bg-spray-effect' pela nossa classe '.fundo-spray' */}
+      <div className="absolute inset-0 fundo-spray bg-no-repeat bg-center opacity-10 z-0"></div>
+
+      <div className="relative z-10 w-full max-w-5xl grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+        
+        <div className="text-white text-center md:text-left">
+          <h1 className="text-4xl lg:text-5xl font-bold uppercase tracking-wider text-brand-text">
+            Participe da Maior Feira de Marketing de 2025
+          </h1>
+          <p className="mt-4 text-lg text-gray-200">
+            Conecte-se com os maiores nomes do marketing e descubra as novas tendências.
+          </p>
           
-          {/* Coluna da Esquerda: Informações do Evento */}
-          <div className="text-white text-center md:text-left">
-            <h1 className="text-3xl lg:text-4xl font-bold uppercase tracking-wider">
-              Participe da Maior Feira de Marketing de 2025
-            </h1>
-            <p className="mt-4 text-lg text-gray-300">
-              Conecte-se com os maiores nomes do marketing e descubra as novas tendências.
-            </p>
-            
-            <div className="mt-8 flex flex-col sm:flex-row gap-8 justify-center md:justify-start">
-              <div className="text-center">
-                <Image src="/assets/marimaria.png" alt="Mari Maria" width={120} height={120} className="rounded-full mx-auto border-4 border-brand-accent" />
-                <h3 className="mt-4 text-xl font-bold">Mari Maria</h3>
-                <p className="text-gray-300">Influencer e Empresária</p>
-              </div>
-              <div className="text-center">
-                <Image src="/assets/virginia.png" alt="Virginia Fonseca" width={120} height={120} className="rounded-full mx-auto border-4 border-brand-accent" />
-                <h3 className="mt-4 text-xl font-bold">Virginia</h3>
-                <p className="text-gray-300">Influencer e Empresária</p>
-              </div>
+          <div className="mt-10 flex gap-10 justify-center md:justify-start items-center">
+            <div className="text-center">
+              <Image src="/assets/marimaria.png" alt="Mari Maria" width={140} height={140} className="rounded-full mx-auto border-2 border-brand-accent" />
+              <h3 className="mt-4 text-xl font-bold">Mari Maria</h3>
+            </div>
+            <div className="text-center">
+              <Image src="/assets/virginia.png" alt="Virginia Fonseca" width={140} height={140} className="rounded-full mx-auto border-2 border-brand-accent" />
+              <h3 className="mt-4 text-xl font-bold">Virginia</h3>
             </div>
           </div>
-          
-          {/* Coluna da Direita: Formulário de Inscrição */}
-          <div>
-            <RegistrationForm />
-          </div>
 
+          <div className="mt-12 text-center md:text-left">
+            <Link 
+              href="/hotsite" 
+              className="py-3 px-6 text-brand-text font-bold border-2 border-brand-accent rounded-lg hover:bg-brand-accent hover:text-white transition-all duration-300"
+            >
+              Ver Site Completo do Evento →
+            </Link>
+          </div>
         </div>
+        
+        <div className="w-full">
+          <RegistrationForm />
+        </div>
+
       </div>
     </main>
   );

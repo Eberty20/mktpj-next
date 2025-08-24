@@ -14,6 +14,8 @@ body {
   font-family: 'DM Sans', sans-serif;
   background-image: linear-gradient(to bottom right, var(--brand-dark), var(--brand-primary), var(--brand-primary), var(--brand-accent));
   color: var(--brand-text);
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
 }
 
 @keyframes fadeInUp {
@@ -96,4 +98,11 @@ input:-webkit-autofill:active {
 /* Garante que os campos vazios usem nosso fundo */
 input {
     background-color: var(--brand-primary) !important;
+}
+/* ... seu CSS existente ... */
+
+/* NOSSAS CLASSES CUSTOMIZADAS PARA IMAGENS DE FUNDO */
+
+.fundo-spray {
+  background-image: url('/assets/spray-effect4.svg');
 }

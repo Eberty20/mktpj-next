@@ -19,6 +19,7 @@ const config: Config = {
       },
       backgroundImage: {
         'etec-photo': "url('/assets/parque-da-juventude.jpg')",
+        'spray-effect': "url('/assets/spray-effect.svg')",
       }
     },
   },

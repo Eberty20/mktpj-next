@@ -1,85 +1,74 @@
+/* components/Navbar.module.css */
+
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
-  background-color: #111827; /* Cor que combina com bg-gray-900 */
+  z-index: 50;
+  background-color: var(--brand-dark);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .navbar__content {
-  padding: 1rem 3rem 0.5rem; /* Reduzi o padding vertical para ficar mais fino */
+  padding: 0.5rem 0.1rem; /* MUDANÇA AQUI: Padding horizontal reduzido */
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
-.navbar__content .navbar__links li {
-  display: inline-block;
+/* Esta regra não é mais necessária com next/image, mas não atrapalha ter uma garantia */
+.navbar__logo img {
+  height: 32px;
+  width: auto;
 }
 
-.navbar__content .navbar__links li:not(:last-of-type) {
-  margin-right: 2rem;
-}
-
-.navbar__content .navbar__links a {
-  padding: 1rem;
-  display: inline-block;
-  transition: color 0.3s ease-in-out;
-  color: white; /* Cor do texto */
-}
-
-.navbar__content .navbar__links a:hover {
-  color: #3b82f6; /* Uma cor azul para o hover */
-}
-
-.navbar.active {
-  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
-}
-
-.navbar__content .navbar__mobile,
-.navbar__content .navbar__mobile .mobile__links {
+/* --- Menu Desktop --- */
+.navbar__links {
   display: none;
 }
 
-@media only screen and (max-width: 768px) {
-  .navbar__content .navbar__links {
-    display: none;
-  }
-
-  .navbar__content .navbar__mobile {
+@media (min-width: 768px) {
+  .navbar__links {
     display: flex;
     align-items: center;
+    gap: 1.5rem;
   }
+}
 
-  .navbar__content .navbar__mobile img {
-    width: 3.6rem;
-    height: 3.6rem;
-    cursor: pointer;
-  }
+.navbar__links a {
+  font-weight: 600;
+  color: var(--brand-text);
+  transition: color 0.3s ease-in-out;
+  padding: 0.5rem;
+}
 
-  .navbar__content .navbar__mobile.active .mobile__links {
-    display: flex;
-    flex-direction: column;
-    background-color: #111827; /* Cor que combina com o fundo */
-    width: 100%;
-    position: absolute;
-    top: 98%;
-    left: 0;
-    padding: 1rem 0;
-    box-shadow: 0 0.4rem 0.5rem rgba(0, 0, 0, 0.1);
-    z-index: 1;
-  }
-  .navbar__content .navbar__mobile a:hover {
-    color: #3b82f6;
-  }
+.navbar__links a:hover {
+  color: var(--brand-accent);
+}
 
-  .navbar__content .navbar__mobile.active .mobile__links li {
-    margin-right: 0;
-  }
+/* --- Menu Mobile --- */
+.navbar__mobile_button {
+  display: block;
+}
 
-  .navbar__content .navbar__mobile.active .mobile__links li a {
-    padding: 1rem;
-    display: block;
-    text-align: center;
+@media (min-width: 768px) {
+  .navbar__mobile_button {
+    display: none;
   }
+}
+
+.navbar__mobile_menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: var(--brand-dark);
+  padding: 2rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
 }
