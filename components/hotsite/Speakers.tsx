@@ -21,11 +21,12 @@ const speakers = [
 ];
 
 const PrevButton = (props: { onClick: () => void; enabled: boolean }) => (
+    // LINHA 25: Esta linha está limpa e correta.
     <button className="embla__button embla__button--prev disabled:opacity-30" onClick={props.onClick} disabled={!props.enabled} aria-label="Slide anterior">
-        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path></svg>
+        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path></svg>
     </button>
 );
- 
+
 const NextButton = (props: { onClick: () => void; enabled: boolean }) => (
     <button className="embla__button embla__button--next disabled:opacity-30" onClick={props.onClick} disabled={!props.enabled} aria-label="Próximo slide">
         <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
@@ -64,8 +65,8 @@ export default function Speakers() {
               {speakers.map((speaker, index) => (
                 <div className="embla__slide flex-[0_0_20rem] min-w-0 pl-4" key={index}>
                   <div className="bg-brand-primary rounded-lg shadow-2xl p-6 h-full flex flex-col items-center">
-                    
-                    {/* AQUI: O contêiner da imagem está maior (w-80 h-80) para dobrar o tamanho da foto. */}
+
+                    {/* Tamanho da Imagem: w-80 h-80 (320px x 320px) */}
                     <div className="relative w-80 h-80 mb-4 rounded-full overflow-hidden">
                       <Image
                         src={speaker.image}
@@ -75,11 +76,11 @@ export default function Speakers() {
                         className="object-cover object-top"
                       />
                     </div>
-                    
+
                     <h3 className="text-2xl font-bold text-brand-accent text-center mt-2">{speaker.name}</h3>
                     <p className="text-sm font-light text-brand-text mb-3 text-center">{speaker.title}</p>
-                    
-                    {/* AQUI: Adicionei a classe text-center para alinhar o texto da biografia. */}
+
+                    {/* Texto da Biografia: Centralizado */}
                     <p className="text-base text-gray-300 flex-grow text-center">{speaker.bio}</p>
                   </div>
                 </div>
