@@ -1,28 +1,23 @@
 // components/hotsite/Hero.tsx
 
 import Link from 'next/link';
-import Image from 'next/image'; // Importar o componente Image
+import Image from 'next/image';
 
 export default function Hero() {
   return (
-    // LINHA AJUSTADA: min-h-screen para ocupar a tela inteira verticalmente
     <section className="w-full bg-brand-dark text-brand-text relative min-h-screen">
       
-      {/* IMAGEM DE FUNDO */}
       <Image
-        src="/assets/parque-da-juventude.jpg" 
+        src="/assets/fundobrilho.svg" 
         alt="Foto da ETEC Parque da Juventude, local do evento"
         fill 
         priority 
-        // opacity-40 para escurecer a imagem e realçar o texto
         className="object-cover object-center opacity-40 z-0" 
       />
 
-      {/* CONTEÚDO DO HERO (TEXTO E BOTÃO) */}
-      {/* LINHA AJUSTADA: min-h-screen para garantir que o conteúdo se centre na tela inteira */}
-      <div className="container mx-auto flex flex-col items-center justify-center min-h-screen px-4 text-center relative z-10">
+      {/* MUDANÇA AQUI: Adicionada a classe pb-20 para dar um respiro na parte de baixo */}
+      <div className="container mx-auto flex flex-col items-center justify-center min-h-screen px-4 text-center relative z-10 pb-20">
         
-        {/* Animação de entrada */}
         <div className="animate-fade-in-up">
           <h1 className="text-4xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl">
             Feira de Marketing
@@ -33,17 +28,21 @@ export default function Hero() {
           </p>
         </div>
 
-        {/* Botão de Call to Action com animação e delay */}
         <div className="mt-8 animate-fade-in-up [animation-delay:0.4s]">
           <Link
             href="/landing-page"
-            // LINHA AJUSTADA: Adicionadas classes border e border-white para o contorno
-            className="inline-flex h-12 items-center justify-center rounded-md bg-brand-primary px-8 text-base font-bold text-white shadow-lg transition-transform duration-300 hover:scale-105 hover:bg-brand-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent border border-white"
+            className="inline-flex h-12 items-center justify-center rounded-md bg-brand-primary px-8 text-base font-bold text-white shadow-lg transition-transform duration-300 hover:scale-105 hover:bg-brand-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent border border-white animate-pulse"
           >
             Garanta sua Vaga Agora!
           </Link>
         </div>
       </div>
+
+      <a href="#speakers" aria-label="Rolar para a próxima seção" className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
+        <svg className="w-8 h-8 text-white scroll-indicator" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </a>
     </section>
   );
 }

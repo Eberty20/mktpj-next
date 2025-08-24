@@ -1,41 +1,37 @@
-// components/Navbar.tsx
+// components/Navbar.tsx - VERSÃO FINAL CORRIGIDA
 'use client';
 
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image'; // Usando next/image para o logo
-import styles from './Navbar.module.css';
+import Image from 'next/image';
+import styles from './Navbar.module.css'; // Usando nosso arquivo .css de volta
 
 export default function Navbar() {
-  // 1. Estado para controlar se o menu mobile está aberto ou fechado
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <nav className={styles.navbar}>
       <div className={styles.navbar__content}>
         <Link href="/">
-          {/* Usando next/image para otimização do logo */}
-          <Image src="/assets/logo.png" alt="Logo MKT PJ" width={70} height={40} />
+          <Image src="/assets/logo.png" alt="Logo MKT PJ" width={80} height={32} />
         </Link>
 
         <ul className={styles.navbar__links}>
           <li><Link href="/">Início</Link></li>
-          <li><Link href="/sobre">Sobre</Link></li> {/* Aponta para a nova página */}
+          <li><Link href="/sobre">Sobre</Link></li>
           <li><Link href="/hotsite">Feira ETEC</Link></li>
-          <li><Link href="/projetos">Projetos</Link></li> {/* Aponta para a nova página */}
+          <li><Link href="/projetos">Projetos</Link></li>
         </ul>
 
-        {/* Botão do Menu Mobile (só aparece em telas pequenas) */}
         <button
           className={styles.navbar__mobile_button}
-          onClick={() => setIsMenuOpen(!isMenuOpen)} // 2. Ação de clique para abrir/fechar
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Abrir menu"
         >
           <Image src="/assets/menu.svg" alt="Ícone do menu" width={32} height={32} />
         </button>
       </div>
       
-      {/* 3. Menu Mobile Dropdown (só renderiza se isMenuOpen for true) */}
       {isMenuOpen && (
         <div className={styles.navbar__mobile_menu}>
           <Link href="/" onClick={() => setIsMenuOpen(false)}>Início</Link>

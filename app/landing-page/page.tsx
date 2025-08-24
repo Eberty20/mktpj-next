@@ -29,11 +29,11 @@ export default function LandingPage() {
           
           <div className="mt-10 flex gap-10 justify-center md:justify-start items-center">
             <div className="text-center">
-              <Image src="/assets/marimaria.png" alt="Mari Maria" width={140} height={140} className="rounded-full mx-auto border-2 border-brand-accent" />
+              <Image src="/assets/mari.png" alt="Mari Maria" width={140} height={140} className="rounded-full mx-auto border-2 border-brand-accent" />
               <h3 className="mt-4 text-xl font-bold">Mari Maria</h3>
             </div>
             <div className="text-center">
-              <Image src="/assets/virginia.png" alt="Virginia Fonseca" width={140} height={140} className="rounded-full mx-auto border-2 border-brand-accent" />
+              <Image src="/assets/virginia2.png" alt="Virginia Fonseca" width={140} height={140} className="rounded-full mx-auto border-2 border-brand-accent" />
               <h3 className="mt-4 text-xl font-bold">Virginia</h3>
             </div>
           </div>
