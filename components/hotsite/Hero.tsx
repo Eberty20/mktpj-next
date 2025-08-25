@@ -8,14 +8,13 @@ export default function Hero() {
     <section className="w-full bg-brand-dark text-brand-text relative min-h-screen">
       
       <Image
-        src="/assets/fundobrilho.svg" 
+        src="/assets/fundobrilho.png" 
         alt="Foto da ETEC Parque da Juventude, local do evento"
         fill 
         priority 
         className="object-cover object-center opacity-40 z-0" 
       />
 
-      {/* MUDANÇA AQUI: Adicionada a classe pb-20 para dar um respiro na parte de baixo */}
       <div className="container mx-auto flex flex-col items-center justify-center min-h-screen px-4 text-center relative z-10 pb-20">
         
         <div className="animate-fade-in-up">
@@ -38,8 +37,9 @@ export default function Hero() {
         </div>
       </div>
 
-      <a href="#speakers" aria-label="Rolar para a próxima seção" className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
-        <svg className="w-8 h-8 text-white scroll-indicator" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      {/* A ÚNICA MUDANÇA É NESTA LINHA: */}
+      <a href="#speakers" aria-label="Rolar para a próxima seção" className="absolute bottom-24 md:bottom-10 left-1/2 -translate-x-1/2 z-10">
+        <svg className="w-8 h-8 text-white scroll-indicator" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
         </svg>
       </a>
