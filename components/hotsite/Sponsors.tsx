@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 
+// MUDANÇA 1: Adicionados os novos patrocinadores
 const sponsors = [
   { name: 'WePink', logo: '/assets/wepink.svg' },
   { name: 'Mari Maria Makeup', logo: '/assets/makeup.svg' },
@@ -9,6 +10,8 @@ const sponsors = [
   { name: 'Globoplay', logo: '/assets/globoplay.svg' },
   { name: 'Mundo do Cabeleireiro', logo: '/assets/mundodocabeleireiro.svg' },
   { name: 'Sephora', logo: '/assets/sephora.svg' },
+  { name: 'Sam Clothing', logo: '/assets/sam.svg' }, // Novo
+  { name: 'ETEC PJ', logo: '/assets/eteclogo.svg' }, // Novo
 ];
 
 export default function Sponsors() {
@@ -18,13 +21,11 @@ export default function Sponsors() {
         <h2 className="text-3xl sm:text-4xl font-bold text-brand-text mb-12">
           Patrocinadores Oficiais
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+        
+        {/* MUDANÇA 2: Ajuste na grade para comportar 8 logos */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-8 items-center">
           {sponsors.map((sponsor) => (
             <div key={sponsor.name} className="flex justify-center">
-              {/* MUDANÇA AQUI: 
-                As classes 'grayscale' e 'hover:grayscale-0' foram removidas.
-                O hover:scale-110 foi mantido.
-              */}
               <div className="relative h-16 w-32 transition-all duration-300 hover:scale-110">
                 <Image
                   src={sponsor.logo}
