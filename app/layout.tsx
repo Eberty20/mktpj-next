@@ -9,8 +9,8 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "MKT PJ | Feira de Marketing",
-  description: "Projeto para a Feira de Marketing da ETEC Polivalente.",
+  title: "MKT PJ",
+  description: "Feira de Marketing da ETEC Parque da Juventude.",
 };
 
 export default function RootLayout({
