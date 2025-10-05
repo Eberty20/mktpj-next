@@ -19,7 +19,6 @@ export default function Hero() {
             <span className="block text-brand-accent">ETEC Parque da Juventude</span>
           </h1>
           
-          {/* DATA ADICIONADA AQUI */}
           <p className="mt-6 text-xl md:text-2xl font-semibold tracking-wide text-brand-text">
             19 de Outubro
           </p>
