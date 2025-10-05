@@ -1,6 +1,5 @@
 // components/hotsite/Schedule.tsx
 
-// Dividimos os dados em dois: Manhã e Tarde
 const morningSchedule = [
   { time: '09:00', title: 'Abertura e Credenciamento', description: 'Café de boas-vindas e registro dos participantes.' },
   { time: '10:00', title: 'Palestra: Construindo um Império Digital', speaker: 'Mari Maria', description: 'Estratégias de marketing que a levaram ao topo.' },
@@ -13,10 +12,9 @@ const afternoonSchedule = [
   { time: '16:00', title: 'Encerramento', description: 'Considerações finais e agradecimentos.' },
 ];
 
-// Um componente menor para evitar repetição de código
+
 const TimelineItem = ({ time, title, speaker, description }: (typeof morningSchedule)[0]) => (
   <div className="relative pl-16 pb-8">
-    {/* Círculo na linha do tempo */}
     <div className="absolute left-0 top-1 h-5 w-5 rounded-full bg-brand-dark border-4 border-brand-accent"></div>
     <p className="text-md font-bold text-brand-text">{time}</p>
     <h3 className="text-lg font-bold text-brand-accent mt-1">{title}</h3>
@@ -33,8 +31,7 @@ export default function Schedule() {
           Cronograma do Evento
         </h2>
 
-        {/* Grid para as duas colunas. Em telas pequenas (mobile) será 1 coluna, 
-            em telas médias (md) ou maiores, serão 2 colunas. */}
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 max-w-4xl mx-auto">
           {/* Coluna da Manhã */}
           <div>
