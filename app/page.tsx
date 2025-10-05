@@ -7,7 +7,6 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      {/* MUDANÇA AQUI: Adicionamos pt-24 para empurrar o conteúdo para baixo */}
       <main className="flex flex-col items-center justify-center min-h-screen text-white p-4 text-center pt-24">
         
         <div className="animate-fade-in-up">
