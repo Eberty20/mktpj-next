@@ -2,7 +2,6 @@
 
 import Image from 'next/image';
 
-// MUDANÇA 1: Adicionados os novos patrocinadores
 const sponsors = [
   { name: 'WePink', logo: '/assets/wepink.svg' },
   { name: 'Mari Maria Makeup', logo: '/assets/makeup.svg' },
@@ -10,8 +9,8 @@ const sponsors = [
   { name: 'Globoplay', logo: '/assets/globoplay.svg' },
   { name: 'Mundo do Cabeleireiro', logo: '/assets/mundodocabeleireiro.svg' },
   { name: 'Sephora', logo: '/assets/sephora.svg' },
-  { name: 'Sam Clothing', logo: '/assets/sam.svg' }, // Novo
-  { name: 'ETEC PJ', logo: '/assets/eteclogo.svg' }, // Novo
+  { name: 'Sam Clothing', logo: '/assets/sam.svg' }, 
+  { name: 'ETEC PJ', logo: '/assets/eteclogo.svg' }, 
 ];
 
 export default function Sponsors() {
@@ -22,7 +21,6 @@ export default function Sponsors() {
           Patrocinadores Oficiais
         </h2>
         
-        {/* MUDANÇA 2: Ajuste na grade para comportar 8 logos */}
         <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-8 items-center">
           {sponsors.map((sponsor) => (
             <div key={sponsor.name} className="flex justify-center">
