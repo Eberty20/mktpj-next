@@ -27,7 +27,6 @@ body {
   animation: fadeInUp 1s ease-out forwards;
 }
 
-/* Estilos básicos para o Embla Carousel */
 .embla {
   overflow: hidden;
 }
@@ -66,7 +65,6 @@ body {
     background-color: rgba(69, 38, 190, 0.5);
 }
 
-/* Estilos para o container do mapa (proporção 4:3) */
 .map-container {
   position: relative;
   width: 70%;
@@ -81,10 +79,6 @@ body {
   height: 100%;
 }
 
-/*
-  Força o estilo customizado em campos de formulário,
-  especialmente contra o preenchimento automático do navegador.
-*/
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus, 
@@ -95,20 +89,14 @@ input:-webkit-autofill:active {
     caret-color: #ffffff !important;
 }
 
-/* Garante que os campos vazios usem nosso fundo */
 input {
     background-color: var(--brand-primary) !important;
 }
-/* ... seu CSS existente ... */
-
-/* NOSSAS CLASSES CUSTOMIZADAS PARA IMAGENS DE FUNDO */
 
 .fundo-spray {
   background-image: url('/assets/fundobrilho.svg');
 }
-/* ... seu CSS existente ... */
 
-/* Animação para a seta de rolagem */
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
