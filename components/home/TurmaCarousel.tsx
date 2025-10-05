@@ -2,7 +2,7 @@
 
 import React, { useCallback, useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
-import { EmblaCarouselType } from 'embla-carousel'; // 1. IMPORTAÇÃO CORRIGIDA
+import { EmblaCarouselType } from 'embla-carousel'; 
 import Autoplay from 'embla-carousel-autoplay';
 import Image from 'next/image';
 
