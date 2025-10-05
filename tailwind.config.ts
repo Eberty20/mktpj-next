@@ -1,7 +1,6 @@
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
-  // A chave 'content' pode ser removida para simplificar na v4
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -10,7 +9,6 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // ATUALIZE ESTE BLOCO PARA USAR AS VARIÁVEIS CSS
         'brand-dark': 'var(--brand-dark)',
         'brand-primary': 'var(--brand-primary)',
         'brand-accent': 'var(--brand-accent)',
