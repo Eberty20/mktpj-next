@@ -1,11 +1,10 @@
-// components/Navbar.tsx - VERSÃO FINAL CORRIGIDA
+
 'use client';
 
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from './Navbar.module.css'; // Usando nosso arquivo .css de volta
-
+import styles from './Navbar.module.css'; 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
