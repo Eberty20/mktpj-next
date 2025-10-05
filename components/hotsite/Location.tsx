@@ -7,30 +7,23 @@ const MAPS_URL = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.661
 
 export default function Location() {
   return (
-    // MUDANÇA 1: Adicionamos 'relative' para o posicionamento da imagem de fundo
     <section id="location" className="w-full py-20 px-4 relative">
         
-        {/* IMAGEM DE FUNDO (nova) */}
         <Image
-          src="/assets/parque-da-juventude.jpg" // A imagem que você quer de fundo
+          src="/assets/parque-da-juventude.jpg" 
           alt="Foto da ETEC Parque da Juventude, local do evento"
           fill 
           priority 
-          className="object-cover object-center opacity-20 z-0" // Opacidade para escurecer
+          className="object-cover object-center opacity-20 z-0" 
         />
 
-      {/* MUDANÇA 2: Adicionamos 'relative' e 'z-10' para o conteúdo ficar na frente */}
       <div className="container mx-auto text-center relative z-10">
         <h2 className="text-3xl sm:text-4xl font-bold text-brand-text mb-4">
           Onde o Futuro do Marketing Acontece
         </h2>
         
-        {/* Removido o parágrafo de endereço daqui pois já está no card do mapa */}
-
         <div className="flex flex-col md:flex-row gap-6 max-w-6xl mx-auto items-center mt-10">
             
-          {/* 1. MAPA E ENDEREÇO (2/3) */}
-          {/* Card com fundo semi-transparente para dar contraste com a imagem de fundo */}
           <div className="w-full md:w-2/3 rounded-lg overflow-hidden shadow-2xl p-4 bg-brand-dark/50 backdrop-blur-sm">
 
             <div className="text-left text-brand-text mb-3">
@@ -53,7 +46,6 @@ export default function Location() {
             </div>
           </div>
             
-          {/* 2. IMAGEM (1/3) */}
           <div className="hidden md:block w-full md:w-1/3 relative rounded-lg overflow-hidden shadow-2xl aspect-[3/2]">
             <Image
                 src="/assets/parque-da-juventude.jpg" 
