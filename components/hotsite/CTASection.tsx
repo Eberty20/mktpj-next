@@ -15,11 +15,9 @@ export default function CTASection() {
           Esta feira é mais que um evento; é um palco montado no coração da ETEC Parque da Juventude, onde o marketing se revela como uma poderosa ferramenta de mudança. Conecte-se, aprenda e saia pronto para transformar o mercado.
         </p>
 
-        {/* Botão idêntico ao do Hero */}
         <div className="mt-8">
           <Link
             href="/landing-page"
-            // MUDANÇA AQUI: Adicionada a classe 'animate-pulse'
             className="inline-flex h-12 items-center justify-center rounded-md bg-brand-accent px-8 text-base font-bold text-white shadow-lg transition-transform duration-300 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent border border-white animate-pulse"
           >
             Garanta sua Vaga Agora!
