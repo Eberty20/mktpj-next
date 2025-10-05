@@ -71,7 +71,6 @@ export default function Speakers() {
                       src={speaker.backgroundImage}
                       alt=""
                       fill
-                      // MUDANÇA AQUI: Opacidade aumentada para 70%
                       className="object-cover opacity-70 z-0"
                     />
 
