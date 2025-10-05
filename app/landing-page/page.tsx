@@ -19,7 +19,7 @@ export default function LandingPage() {
         
         <div className="text-white text-center md:text-left">
           
-          {/* DATA DO EVENTO ADICIONADA AQUI */}
+        
           <div className="mb-4 text-lg font-semibold text-brand-accent tracking-widest">
             19 DE OUTUBRO
           </div>
